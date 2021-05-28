@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AA0822DC265F4CCA00D6A833 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA0822DB265F4CCA00D6A833 /* LaunchScreen.storyboard */; };
+		AA52EBED265FF5DE0058E1BD /* App.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA52EBE5265FF5DE0058E1BD /* App.xcframework */; };
+		AA52EBEE265FF5DE0058E1BD /* Flutter.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA52EBE6265FF5DE0058E1BD /* Flutter.xcframework */; };
 		AACAF142265F3C2000402528 /* CanaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAF141265F3C2000402528 /* CanaryApp.swift */; };
 		AACAF144265F3C2000402528 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAF143265F3C2000402528 /* ContentView.swift */; };
 		AACAF146265F3C2100402528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AACAF145265F3C2100402528 /* Assets.xcassets */; };
@@ -33,8 +35,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AA52EBF5265FF87D0058E1BD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AA0822DB265F4CCA00D6A833 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA52EBE5265FF5DE0058E1BD /* App.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = App.xcframework; sourceTree = "<group>"; };
+		AA52EBE6265FF5DE0058E1BD /* Flutter.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Flutter.xcframework; sourceTree = "<group>"; };
 		AACAF13E265F3C2000402528 /* Canary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AACAF141265F3C2000402528 /* CanaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanaryApp.swift; sourceTree = "<group>"; };
 		AACAF143265F3C2000402528 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA52EBEE265FF5DE0058E1BD /* Flutter.xcframework in Frameworks */,
+				AA52EBED265FF5DE0058E1BD /* App.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,9 +101,27 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		AA52EBE3265FF5DE0058E1BD /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				AA52EBE4265FF5DE0058E1BD /* Release */,
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
+		AA52EBE4265FF5DE0058E1BD /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				AA52EBE5265FF5DE0058E1BD /* App.xcframework */,
+				AA52EBE6265FF5DE0058E1BD /* Flutter.xcframework */,
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
 		AACAF135265F3C2000402528 = {
 			isa = PBXGroup;
 			children = (
+				AA52EBE3265FF5DE0058E1BD /* Flutter */,
 				AACAF140265F3C2000402528 /* Canary */,
 				AACAF152265F3C2100402528 /* CanaryTests */,
 				AACAF15D265F3C2100402528 /* CanaryUITests */,
@@ -151,6 +188,7 @@
 				AACAF13A265F3C2000402528 /* Sources */,
 				AACAF13B265F3C2000402528 /* Frameworks */,
 				AACAF13C265F3C2000402528 /* Resources */,
+				AA52EBF5265FF87D0058E1BD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -433,6 +471,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Canary/Preview Content\"";
 				DEVELOPMENT_TEAM = 3BZ4BBRK4N;
 				ENABLE_PREVIEWS = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(PROJECT_DIR)/Flutter/Release",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = Canary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +497,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Canary/Preview Content\"";
 				DEVELOPMENT_TEAM = 3BZ4BBRK4N;
 				ENABLE_PREVIEWS = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flutter/Release",
+				);
 				INFOPLIST_FILE = Canary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,9 +1,10 @@
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        maven { url '../flutter_modules/build/host/outputs/repo' }
+        maven { url 'https://storage.flutter-io.cn/download.flutter.io' }
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
     }
 }
 rootProject.name = "Canary"

@@ -1,5 +1,5 @@
-name: canary
-description: A new Flutter project.
+name: flutter_modules
+description: A new flutter module project.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -82,5 +82,5 @@ flutter:
   # identifiers, which may be completely independent or the same as these.
   module:
     androidX: true
-    androidPackage: com.abbe.canary
-    iosBundleIdentifier: com.abbe.canary
+    androidPackage: com.abbe.flutter_modules
+    iosBundleIdentifier: com.abbe.flutterModules
